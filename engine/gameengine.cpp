@@ -3,7 +3,7 @@
 #include <GLFW/glfw3.h>
 #include <iostream>
 
-// Function to initialize GLFW and OpenGL
+//the fucntion to the opengl
 bool initialize() {
     // Initialize GLFW
     if (!glfwInit()) {
@@ -11,7 +11,7 @@ bool initialize() {
         return false;
     }
 
-    // Create a windowed mode window and its OpenGL context
+    //the window and opengl context
     GLFWwindow* window = glfwCreateWindow(800, 600, "My Game Engine", nullptr, nullptr);
     if (!window) {
         std::cerr << "Failed to create GLFW window!" << std::endl;
@@ -19,7 +19,7 @@ bool initialize() {
         return false;
     }
 
-    // Make the window's context current
+    // making the window context current
     glfwMakeContextCurrent(window);
     glfwSwapInterval(1);  // Enable vsync
 
@@ -32,7 +32,7 @@ bool initialize() {
     return true;
 }
 
-// Basic game loop
+// Basic game loop:c
 void gameLoop(GLFWwindow* window) {
     while (!glfwWindowShouldClose(window)) {
         glClear(GL_COLOR_BUFFER_BIT);
